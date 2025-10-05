@@ -5,6 +5,7 @@ import { CourseCard } from "@/components/CourseCard";
 import { LeaderboardPreview } from "@/components/LeaderboardPreview";
 import { RewardsPreview } from "@/components/RewardsPreview";
 import { Button } from "@/components/ui/button";
+import { EXTERNAL_APP_BASE_URL } from "@/config";
 
 export default function Index() {
   const [level, setLevel] = useState<EducationLevel>(
@@ -35,8 +36,7 @@ export default function Index() {
                   className="h-6 w-6 rounded-md object-cover"
                 />
                 <a
-                  href="https://d695dee0c3c54d5cb882ace3593e0e19-f6d62edd306142089ce873f0f.fly.dev/simulation"
-                  target="_blank"
+                  href={`${EXTERNAL_APP_BASE_URL}/simulation`}
                   rel="noreferrer"
                   className="flex cursor-pointer pointer-events-auto font-semibold"
                 >
@@ -73,8 +73,7 @@ export default function Index() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg">
                   <a
-                    href="https://d695dee0c3c54d5cb882ace3593e0e19-f6d62edd306142089ce873f0f.fly.dev/simulation"
-                    target="_blank"
+                    href={`${EXTERNAL_APP_BASE_URL}/simulation`}
                     rel="noreferrer"
                     className="pointer-events-auto cursor-pointer"
                   >
@@ -83,7 +82,7 @@ export default function Index() {
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <a
-                    href="https://d695dee0c3c54d5cb882ace3593e0e19-f6d62edd306142089ce873f0f.fly.dev/courses"
+                    href={`${EXTERNAL_APP_BASE_URL}/courses`}
                     className="pointer-events-auto cursor-pointer"
                   >
                     Explore Courses
@@ -152,7 +151,7 @@ export default function Index() {
                   className="bg-white text-emerald-900 hover:bg-emerald-100"
                 >
                   <a
-                    href="https://d695dee0c3c54d5cb882ace3593e0e19-f6d62edd306142089ce873f0f.fly.dev/simulation"
+                    href={`${EXTERNAL_APP_BASE_URL}/simulation`}
                     rel="noreferrer"
                     className="pointer-events-auto cursor-pointer"
                   >
