@@ -63,18 +63,18 @@ export function NavBar() {
             <Link to="/courses">Start Learning</Link>
           </Button>
           <Button asChild>
-        <a href={`${EXTERNAL_APP_BASE_URL}/badges`}>Badges</a>
-      </Button>
+            <a href={`${EXTERNAL_APP_BASE_URL}/badges`}>Badges</a>
+          </Button>
           {isAdmin() && (
             <Button asChild variant="outline">
               <Link to="/admin">Admin</Link>
             </Button>
           )}
           <Button asChild variant="outline">
-        <a href={`${EXTERNAL_APP_BASE_URL}/auth`} rel="noreferrer">
-          Sign In
-        </a>
-      </Button>
+            <a href={`${EXTERNAL_APP_BASE_URL}/auth`} rel="noreferrer">
+              Sign In
+            </a>
+          </Button>
         </div>
       </div>
     </header>
