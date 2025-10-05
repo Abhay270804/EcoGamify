@@ -5,7 +5,7 @@ import { CourseCard } from "@/components/CourseCard";
 import { LeaderboardPreview } from "@/components/LeaderboardPreview";
 import { RewardsPreview } from "@/components/RewardsPreview";
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_APP_BASE_URL } from "@/config";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const [level, setLevel] = useState<EducationLevel>(
@@ -35,13 +35,12 @@ export default function Index() {
                   alt="EcoGamify emblem"
                   className="h-6 w-6 rounded-md object-cover"
                 />
-                <a
-                  href={`${EXTERNAL_APP_BASE_URL}/simulation`}
-                  rel="noreferrer"
+                <Link
+                  to="/simulation"
                   className="flex cursor-pointer pointer-events-auto font-semibold"
                 >
                   EcoGamify Planet Lab
-                </a>
+                </Link>
               </div>
               <h1 className="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
                 Learn the planet. Play the future. Earn rewards.
@@ -72,21 +71,20 @@ export default function Index() {
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg">
-                  <a
-                    href={`${EXTERNAL_APP_BASE_URL}/simulation`}
-                    rel="noreferrer"
+                  <Link
+                    to="/simulation"
                     className="pointer-events-auto cursor-pointer"
                   >
                     Launch EcoSphere Simulation
-                  </a>
+                  </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a
-                    href={`${EXTERNAL_APP_BASE_URL}/courses`}
+                  <Link
+                    to="/courses"
                     className="pointer-events-auto cursor-pointer"
                   >
                     Explore Courses
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -150,13 +148,12 @@ export default function Index() {
                   variant="secondary"
                   className="bg-white text-emerald-900 hover:bg-emerald-100"
                 >
-                  <a
-                    href={`${EXTERNAL_APP_BASE_URL}/simulation`}
-                    rel="noreferrer"
+                  <Link
+                    to="/simulation"
                     className="pointer-events-auto cursor-pointer"
                   >
                     Play the Simulation
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { EXTERNAL_APP_BASE_URL } from "@/config";
 import { isAdmin } from "@/services/auth";
 
 export function NavBar() {
@@ -42,7 +41,6 @@ export function NavBar() {
           </NavLink>
           <NavLink
             to="/simulation"
-            rel="noreferrer"
             className={({ isActive }) =>
               `transition-colors hover:text-primary ${isActive ? "text-primary" : "text-foreground/70"}`
             }
@@ -63,7 +61,7 @@ export function NavBar() {
             <Link to="/courses">Start Learning</Link>
           </Button>
           <Button asChild>
-            <a href={`${EXTERNAL_APP_BASE_URL}/badges`}>Badges</a>
+            <Link to="/badges">Badges</Link>
           </Button>
           {isAdmin() && (
             <Button asChild variant="outline">
@@ -71,9 +69,7 @@ export function NavBar() {
             </Button>
           )}
           <Button asChild variant="outline">
-            <a href={`${EXTERNAL_APP_BASE_URL}/auth`} rel="noreferrer">
-              Sign In
-            </a>
+            <Link to="/auth">Sign In</Link>
           </Button>
         </div>
       </div>
