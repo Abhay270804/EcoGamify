@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { EXTERNAL_APP_BASE_URL } from "@/config";
 import { isAdmin } from "@/services/auth";
 
 export function NavBar() {
@@ -62,18 +63,18 @@ export function NavBar() {
             <Link to="/courses">Start Learning</Link>
           </Button>
           <Button asChild>
-            <Link to="/badges">Badges</Link>
-          </Button>
+        <a href={`${EXTERNAL_APP_BASE_URL}/badges`}>Badges</a>
+      </Button>
           {isAdmin() && (
             <Button asChild variant="outline">
               <Link to="/admin">Admin</Link>
             </Button>
           )}
           <Button asChild variant="outline">
-            <Link to="/auth" target="_blank" rel="noreferrer">
-              Sign In
-            </Link>
-          </Button>
+        <a href={`${EXTERNAL_APP_BASE_URL}/auth`} rel="noreferrer">
+          Sign In
+        </a>
+      </Button>
         </div>
       </div>
     </header>
